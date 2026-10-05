@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Weather Project</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex justify-center items-center bg-sky-100">
+
+    <div class="bg-white h-[620px] w-[450px] rounded-2xl shadow-xl p-6">
+
+
+        <div class="flex-col">
+
+            <h1 class="text-5xl font-bold text-center text-sky-600 mb-6">
+                Weather App
+            </h1>
+
+            <div class="flex justify-between gap-5">
+
+                <input
+                    id="cityInput"
+                    type="text"
+                    placeholder="Enter City Name"
+                    class="flex-1 border-2 border-gray-300 rounded-lg px-4 py-2 outline-none focus:border-sky-500"
+                >
+
+                <button
+                    onclick="getWeather()"
+                    class="bg-sky-500 text-white w-32 rounded-lg hover:bg-sky-600"
+                >
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div id="weatherbox" class="text-center">
+
+            <div class="mt-6 text-7xl">
+                ⛅
+            </div>
+
+            <h1 id="city" class="text-2xl font-bold">
+                Gujranwala
+            </h1>
+
+            <p
+                id="temperature"
+                class="text-5xl font-bold text-sky-600 my-3"
+            >
+                28°C
+            </p>
+
+            <p
+                id="condition"
+                class="text-lg text-gray-600"
+            >
+                Clear Sky
+            </p>
+
+        </div>
+
+
+        <div class="grid grid-cols-2 gap-5 mt-6">
+
+            <div class="bg-blue-100 rounded-xl p-4">
+
+                <p class="text-gray-500 text-2xl font-bold ml-8">
+                    Humidity
+                </p>
+
+                <p
+                    id="humidity"
+                    class="font-bold ml-14 text-lg"
+                >
+                    65%
+                </p>
+
+            </div>
+
+            <div class="bg-blue-100 rounded-xl p-4">
+
+                <p class="text-gray-500 text-2xl font-bold ml-14">
+                    Wind
+                </p>
+
+                <p
+                    id="Wind"
+                    class="font-bold ml-12 text-lg"
+                >
+                    20.2 km/h
+                </p>
+
+            </div>
+
+            <div class="bg-blue-100 rounded-xl p-4">
+
+                <p class="text-gray-500 text-2xl font-bold ml-8">
+                    Feels like
+                </p>
+
+                <p
+                    id="feelsLike"
+                    class="font-bold ml-14 text-lg"
+                >
+                    30°C
+                </p>
+
+            </div>
+
+            <div class="bg-blue-100 rounded-xl p-4">
+
+                <p class="text-gray-500 text-2xl font-bold ml-10">
+                    Pressure
+                </p>
+
+                <p
+                    id="presure"
+                    class="font-bold ml-12 text-lg"
+                >
+                    1012 hPa
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
